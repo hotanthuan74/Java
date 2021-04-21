@@ -18,11 +18,12 @@ public class NhanvienDTO {
     private String chucvuNhanvien;
     private double luongNhanvien;
     private String diaChiNhanvien;
+    private String trangThaiNhanVien;
 
     public NhanvienDTO() {
     }
 
-    public NhanvienDTO(int idNhanvien, String tenNhanvien, String hoNhanvien, int sdtNhanvien, int tuoiNhanvien, String chucvuNhanvien, double luongNhanvien, String diaChiNhanvien) {
+    public NhanvienDTO(int idNhanvien, String tenNhanvien, String hoNhanvien, int sdtNhanvien, int tuoiNhanvien, String chucvuNhanvien, double luongNhanvien, String diaChiNhanvien, String trangThaiNhanvien) {
         this.idNhanvien = idNhanvien;
         this.tenNhanvien = tenNhanvien;
         this.hoNhanvien = hoNhanvien;
@@ -31,6 +32,15 @@ public class NhanvienDTO {
         this.chucvuNhanvien = chucvuNhanvien;
         this.luongNhanvien = luongNhanvien;
         this.diaChiNhanvien = diaChiNhanvien;
+        this.trangThaiNhanVien = trangThaiNhanvien;
+    }
+
+    public String getTrangThaiNhanVien() {
+        return trangThaiNhanVien;
+    }
+
+    public void setTrangThaiNhanVien(String trangThaiNhanVien) {
+        this.trangThaiNhanVien = trangThaiNhanVien;
     }
 
     public int getIdNhanvien() {
