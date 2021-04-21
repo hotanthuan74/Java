@@ -15,16 +15,18 @@ public class KhachhangDTO {
     private String hoKhachhang;
     private String diaChi;
     private int sdtKhachhang;
+    private String emailKhachhang;
 
     public KhachhangDTO() {
     }
 
-    public KhachhangDTO(int maKhachhang, String tenKhachhang, String hoKhachhang, String diaChi, int sdtKhachhang) {
+    public KhachhangDTO(int maKhachhang, String tenKhachhang, String hoKhachhang, String diaChi, int sdtKhachhang,String emailKhachhang) {
         this.maKhachhang = maKhachhang;
         this.tenKhachhang = tenKhachhang;
         this.hoKhachhang = hoKhachhang;
         this.diaChi = diaChi;
         this.sdtKhachhang = sdtKhachhang;
+        this.emailKhachhang = emailKhachhang;
     }
 
     public int getMaKhachhang() {
@@ -33,6 +35,14 @@ public class KhachhangDTO {
 
     public void setMaKhachhang(int maKhachhang) {
         this.maKhachhang = maKhachhang;
+    }
+
+    public String getEmailKhachhang() {
+        return emailKhachhang;
+    }
+
+    public void setEmailKhachhang(String emailKhachhang) {
+        this.emailKhachhang = emailKhachhang;
     }
 
     
