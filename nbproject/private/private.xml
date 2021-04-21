@@ -3,8 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Github/Java/src/DAO/NhanvienDAO.java</file>
+            <file>file:/D:/Github/Java/src/DAO/ChitietphieunhapDAO.java</file>
             <file>file:/D:/Github/Java/src/DAO/NhacungcapDAO.java</file>
+            <file>file:/D:/Github/Java/src/DAO/KhachhangDAO.java</file>
+            <file>file:/D:/Github/Java/src/DAO/HoadonDAO.java</file>
+            <file>file:/D:/Github/Java/src/DAO/NhanvienDAO.java</file>
+            <file>file:/D:/Github/Java/src/DAO/ChitietloaisanphamDAO.java</file>
+            <file>file:/D:/Github/Java/src/DAO/DB_ConnectionDAO.java</file>
+            <file>file:/D:/Github/Java/src/DAO/DangnhapDAO.java</file>
+            <file>file:/D:/Github/Java/src/GUI/dangnhap.java</file>
         </group>
     </open-files>
 </project-private>
