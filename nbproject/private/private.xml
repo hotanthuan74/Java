@@ -3,12 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Bai_tap/JAVA/Project_Maket_Mini/src/BUS/DangnhapBUS.java</file>
-            <file>file:/D:/Bai_tap/JAVA/Project_Maket_Mini/src/DAO/DangnhapDAO.java</file>
-            <file>file:/D:/Bai_tap/JAVA/Project_Maket_Mini/src/GUI/dangnhap.java</file>
-            <file>file:/D:/Bai_tap/JAVA/Project_Maket_Mini/src/GUI/JFHethong_admin.java</file>
-            <file>file:/D:/Bai_tap/JAVA/Project_Maket_Mini/src/GUI/test.java</file>
-            <file>file:/D:/Bai_tap/JAVA/Project_Maket_Mini/src/GUI/JFHethong_Nhanvien.java</file>
+            <file>file:/D:/Github/Java/src/DAO/NhanvienDAO.java</file>
+            <file>file:/D:/Github/Java/src/DAO/NhacungcapDAO.java</file>
         </group>
     </open-files>
 </project-private>
