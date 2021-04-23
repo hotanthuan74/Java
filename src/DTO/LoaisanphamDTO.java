@@ -36,6 +36,14 @@ public class LoaisanphamDTO {
     public void setTenLoaiSanphamDTO(String tenLoaiSanphamDTO) {
         this.tenLoaiSanphamDTO = tenLoaiSanphamDTO;
     }
+
+    public void getTenLoaiSanphamDTO(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void getIdLoaiSanphamDTO(int aInt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

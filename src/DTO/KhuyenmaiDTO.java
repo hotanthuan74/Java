@@ -18,17 +18,19 @@ public class KhuyenmaiDTO {
     private Date ngayktKhuyenmaiDTO;
     private double phantramKhuyenmaiDTO;
     private double dieukienKHuyemaiDTO;
+    private String noidungkhuyenmaiDTO;
 
     public KhuyenmaiDTO() {
     }
 
-    public KhuyenmaiDTO(int idKhuyenmaiDTO, String tenKhuyenmaiDTO, Date ngaybdKhuyenmaiDTO, Date ngayktKhuyenmaiDTO, double phantramKhuyenmaiDTO, double dieukienKHuyemaiDTO) {
+    public KhuyenmaiDTO(int idKhuyenmaiDTO, String tenKhuyenmaiDTO, Date ngaybdKhuyenmaiDTO, Date ngayktKhuyenmaiDTO, double phantramKhuyenmaiDTO, double dieukienKHuyemaiDTO, String noidungkhuyenmaiDTO) {
         this.idKhuyenmaiDTO = idKhuyenmaiDTO;
         this.tenKhuyenmaiDTO = tenKhuyenmaiDTO;
         this.ngaybdKhuyenmaiDTO = ngaybdKhuyenmaiDTO;
         this.ngayktKhuyenmaiDTO = ngayktKhuyenmaiDTO;
         this.phantramKhuyenmaiDTO = phantramKhuyenmaiDTO;
         this.dieukienKHuyemaiDTO = dieukienKHuyemaiDTO;
+        this.noidungkhuyenmaiDTO = noidungkhuyenmaiDTO;
     }
 
     public int getIdKhuyenmaiDTO() {
@@ -78,7 +80,14 @@ public class KhuyenmaiDTO {
     public void setDieukienKHuyemaiDTO(double dieukienKHuyemaiDTO) {
         this.dieukienKHuyemaiDTO = dieukienKHuyemaiDTO;
     }
-    
-    
-    
+
+    public String getNoidungkhuyenmaiDTO() {
+        return noidungkhuyenmaiDTO;
+    }
+
+    public void setNoidungkhuyenmaiDTO(String noidungkhuyenmaiDTO) {
+        this.noidungkhuyenmaiDTO = noidungkhuyenmaiDTO;
+    }
+
+   
 }

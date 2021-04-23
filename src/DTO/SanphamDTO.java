@@ -12,19 +12,23 @@ package DTO;
 public class SanphamDTO {
     private int idSanphamDTO;
     private LoaisanphamDTO idLoaiSanphamDTO;
-    private double giaSanphamDTO;
-    private int soluongSanphamDTO;
+    private String tensanphamDTO;
+    private double dongiasanphamDTO;
+    private int soluongsanphamDTO;
     private String donvitinhSanphamDTO;
+    private String trangthaisanphamDTO;
 
     public SanphamDTO() {
     }
 
-    public SanphamDTO(int idSanphamDTO, LoaisanphamDTO idLoaiSanphamDTO, double giaSanphamDTO, int soluongSanphamDTO, String donvitinhSanphamDTO) {
+    public SanphamDTO(int idSanphamDTO, LoaisanphamDTO idLoaiSanphamDTO, String tensanphamDTO, double dongiasanphamDTO, int soluongsanphamDTO, String donvitinhSanphamDTO, String trangthaisanphamDTO) {
         this.idSanphamDTO = idSanphamDTO;
         this.idLoaiSanphamDTO = idLoaiSanphamDTO;
-        this.giaSanphamDTO = giaSanphamDTO;
-        this.soluongSanphamDTO = soluongSanphamDTO;
+        this.tensanphamDTO = tensanphamDTO;
+        this.dongiasanphamDTO = dongiasanphamDTO;
+        this.soluongsanphamDTO = soluongsanphamDTO;
         this.donvitinhSanphamDTO = donvitinhSanphamDTO;
+        this.trangthaisanphamDTO = trangthaisanphamDTO;
     }
 
     public int getIdSanphamDTO() {
@@ -43,20 +47,28 @@ public class SanphamDTO {
         this.idLoaiSanphamDTO = idLoaiSanphamDTO;
     }
 
-    public double getGiaSanphamDTO() {
-        return giaSanphamDTO;
+    public String getTensanphamDTO() {
+        return tensanphamDTO;
     }
 
-    public void setGiaSanphamDTO(double giaSanphamDTO) {
-        this.giaSanphamDTO = giaSanphamDTO;
+    public void setTensanphamDTO(String tensanphamDTO) {
+        this.tensanphamDTO = tensanphamDTO;
     }
 
-    public int getSoluongSanphamDTO() {
-        return soluongSanphamDTO;
+    public double getDongiasanphamDTO() {
+        return dongiasanphamDTO;
     }
 
-    public void setSoluongSanphamDTO(int soluongSanphamDTO) {
-        this.soluongSanphamDTO = soluongSanphamDTO;
+    public void setDongiasanphamDTO(double dongiasanphamDTO) {
+        this.dongiasanphamDTO = dongiasanphamDTO;
+    }
+
+    public int getSoluongsanphamDTO() {
+        return soluongsanphamDTO;
+    }
+
+    public void setSoluongsanphamDTO(int soluongsanphamDTO) {
+        this.soluongsanphamDTO = soluongsanphamDTO;
     }
 
     public String getDonvitinhSanphamDTO() {
@@ -66,6 +78,14 @@ public class SanphamDTO {
     public void setDonvitinhSanphamDTO(String donvitinhSanphamDTO) {
         this.donvitinhSanphamDTO = donvitinhSanphamDTO;
     }
-    
-    
+
+    public String getTrangthaisanphamDTO() {
+        return trangthaisanphamDTO;
+    }
+
+    public void setTrangthaisanphamDTO(String trangthaisanphamDTO) {
+        this.trangthaisanphamDTO = trangthaisanphamDTO;
+    }
 }
+
+    
