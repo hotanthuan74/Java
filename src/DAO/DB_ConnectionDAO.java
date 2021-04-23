@@ -14,7 +14,7 @@ public class DB_ConnectionDAO {
    private String ipAddress="localhost:3306";
    private String userDB="root";
    private String passDB="";
-   private String nameDatabase="db_sieuthimin";
+   private String nameDatabase="db_sieuthimini";
    private String urlDtb="jdbc:mysql://"+ipAddress+"/"+nameDatabase+"?useUnicode=true&characterEncoding=utf-8";
    
     Connection conn=null;
