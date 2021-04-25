@@ -8,8 +8,11 @@
             <file>file:/C:/code/doAnJava/src/DTO/PhieunhaphangDTO.java</file>
             <file>file:/C:/code/doAnJava/src/DTO/NhacungcapDTO.java</file>
             <file>file:/C:/code/doAnJava/src/BUS/HoadonBUS.java</file>
+            <file>file:/C:/code/doAnJava/src/DAO/KhachhangDAO.java</file>
             <file>file:/C:/code/doAnJava/src/DAO/NhanvienDAO.java</file>
+            <file>file:/C:/code/doAnJava/src/GUI/JFHethong_admin.java</file>
             <file>file:/C:/code/doAnJava/src/BUS/KhachhangBUS.java</file>
+            <file>file:/C:/code/doAnJava/src/DAO/DB_ConnectionDAO.java</file>
             <file>file:/C:/code/doAnJava/src/BUS/DangnhapBUS.java</file>
             <file>file:/C:/code/doAnJava/src/DTO/KhuyenmaiDTO.java</file>
             <file>file:/C:/code/doAnJava/src/DAO/SanphamDAO.java</file>
