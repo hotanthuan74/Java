@@ -562,7 +562,8 @@ public class JFHethong_admin extends javax.swing.JFrame {
         jScrollPane13 = new javax.swing.JScrollPane();
         jTable12 = new javax.swing.JTable();
         jButton47 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         panelThongke = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
         panelSP = new javax.swing.JPanel();
@@ -4375,9 +4376,9 @@ public class JFHethong_admin extends javax.swing.JFrame {
         panelNVLayout.setHorizontalGroup(
             panelNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNVLayout.createSequentialGroup()
-                .addGap(102, 102, 102)
+                .addGap(72, 72, 72)
                 .addComponent(btnThemNV, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(63, 63, 63)
                 .addGroup(panelNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelNVLayout.createSequentialGroup()
                         .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4872,25 +4873,48 @@ public class JFHethong_admin extends javax.swing.JFrame {
 
         jTable12.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "STT", "ID Hóa đơn", "ID Nhân viên", "ID Khách hàng", "Id Khuyến mai", "Ngày lập", "Giờ lập", "Tổng hóa đơn"
+                "STT", "ID Hóa đơn", "ID Nhân viên", "ID Khách hàng", "Ngày lập", "Giờ lập", "Tổng hóa đơn"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane13.setViewportView(jTable12);
-        if (jTable12.getColumnModel().getColumnCount() > 0) {
-            jTable12.getColumnModel().getColumn(4).setHeaderValue("");
-        }
 
         jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_data_backup_30px.png"))); // NOI18N
         jButton47.setText("Cập nhập dữ liệu");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/showPass.png"))); // NOI18N
-        jButton1.setText("Xem chi tiết Hóa đơn");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Tên sản phẩm", "Số lượng", "Giá", "% khuyến mãi", "Tổng giá"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jTable1);
 
         javax.swing.GroupLayout panelHDLayout = new javax.swing.GroupLayout(panelHD);
         panelHD.setLayout(panelHDLayout);
@@ -4899,30 +4923,28 @@ public class JFHethong_admin extends javax.swing.JFrame {
             .addGroup(panelHDLayout.createSequentialGroup()
                 .addGroup(panelHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelHDLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 589, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelHDLayout.createSequentialGroup()
                         .addGap(232, 232, 232)
                         .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton47))
                     .addGroup(panelHDLayout.createSequentialGroup()
-                        .addGap(253, 253, 253)
+                        .addGap(324, 324, 324)
                         .addComponent(jButton46)
-                        .addGap(102, 102, 102)
-                        .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(78, 78, 78)
-                        .addComponent(jButton1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHDLayout.createSequentialGroup()
-                .addGap(0, 46, Short.MAX_VALUE)
-                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 942, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
+                        .addGap(175, 175, 175)
+                        .addComponent(jButton45, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         panelHDLayout.setVerticalGroup(
             panelHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelHDLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(panelHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(panelHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelHDLayout.createSequentialGroup()
@@ -4932,8 +4954,10 @@ public class JFHethong_admin extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(jButton47, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(85, 85, 85))
+                .addGroup(panelHDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(119, 119, 119))
         );
 
         panelThongke.setPreferredSize(new java.awt.Dimension(1038, 627));
@@ -5539,9 +5563,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PanelHeader, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(Hethong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Hethong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -6827,7 +6849,6 @@ public class JFHethong_admin extends javax.swing.JFrame {
     private javax.swing.JDialog editNhanvien;
     private javax.swing.JDialog editSanpham;
     private javax.swing.JDialog editTaikhoan;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton14;
@@ -6957,6 +6978,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -6964,6 +6986,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable10;
     private javax.swing.JTable jTable11;
     private javax.swing.JTable jTable12;

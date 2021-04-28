@@ -3112,11 +3112,9 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        Hethong.setBackground(new java.awt.Color(30, 32, 43));
+        PanelMenuht.setBackground(new java.awt.Color(37, 187, 219));
 
-        PanelMenuht.setBackground(new java.awt.Color(30, 32, 43));
-
-        panelMenu.setBackground(new java.awt.Color(30, 32, 43));
+        panelMenu.setBackground(new java.awt.Color(37, 187, 219));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -3134,7 +3132,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             }
         });
 
-        jPanel3.setBackground(new java.awt.Color(32, 34, 43));
+        jPanel3.setBackground(new java.awt.Color(37, 187, 219));
         jPanel3.setDoubleBuffered(false);
         jPanel3.setRequestFocusEnabled(false);
         jPanel3.setVerifyInputWhenFocusTarget(false);
@@ -3565,12 +3563,10 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                     .addGroup(panelMenuLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(75, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelMenuLayout.setVerticalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3596,19 +3592,11 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         );
         PanelMenuhtLayout.setVerticalGroup(
             PanelMenuhtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMenuhtLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenuhtLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(panelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
-
-        PanelHienthi.setBackground(new java.awt.Color(30, 32, 43));
-
-        panelBH.setBackground(new java.awt.Color(255, 255, 255));
-
-        Panelsanpham.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("Tìm kiếm");
@@ -3658,6 +3646,11 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_add_30px.png"))); // NOI18N
         jButton3.setText("Thêm");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelsanphamLayout = new javax.swing.GroupLayout(Panelsanpham);
         Panelsanpham.setLayout(PanelsanphamLayout);
@@ -3681,12 +3674,10 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(22, 22, 22))
         );
-
-        Panelchithietbanhang.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3780,7 +3771,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                     .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -3798,10 +3789,10 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         );
         panelBHLayout.setVerticalGroup(
             panelBHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBHLayout.createSequentialGroup()
-                .addComponent(Panelchithietbanhang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
             .addComponent(Panelsanpham, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelBHLayout.createSequentialGroup()
+                .addComponent(Panelchithietbanhang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         btnThemKH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_add_30px.png"))); // NOI18N
@@ -3884,13 +3875,13 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addComponent(jButton15)
                 .addGap(161, 161, 161))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelKHLayout.createSequentialGroup()
-                .addContainerGap(271, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(259, 259, 259))
             .addGroup(panelKHLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 964, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         panelKHLayout.setVerticalGroup(
             panelKHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3906,7 +3897,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
+                .addGap(52, 52, 52))
         );
 
         panelNCC.setPreferredSize(new java.awt.Dimension(1038, 627));
@@ -4394,23 +4385,26 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             .addGroup(panelSPLayout.createSequentialGroup()
                 .addGroup(panelSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelSPLayout.createSequentialGroup()
-                        .addGap(195, 195, 195)
-                        .addComponent(btnThemSP, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSuaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton49)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton50))
-                    .addGroup(panelSPLayout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelSPLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
+                        .addGroup(panelSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelSPLayout.createSequentialGroup()
+                                .addGap(195, 195, 195)
+                                .addComponent(btnThemSP, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)
+                                .addComponent(jButton44, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSuaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton49)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton50))
+                            .addGroup(panelSPLayout.createSequentialGroup()
+                                .addGap(270, 270, 270)
+                                .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 183, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSPLayout.createSequentialGroup()
+                        .addGap(0, 60, Short.MAX_VALUE)
                         .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 978, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap())
         );
         panelSPLayout.setVerticalGroup(
             panelSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4424,14 +4418,10 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                     .addComponent(jButton50, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(29, 29, 29)
                 .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
+                .addGap(39, 39, 39))
         );
-
-        panelNH.setBackground(new java.awt.Color(204, 204, 204));
-
-        Panelsanphamnh.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel27.setText("Tìm kiếm");
@@ -4487,15 +4477,15 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         PanelsanphamnhLayout.setHorizontalGroup(
             PanelsanphamnhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelsanphamnhLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(PanelsanphamnhLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PanelsanphamnhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
+            .addGroup(PanelsanphamnhLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelsanphamnhLayout.setVerticalGroup(
             PanelsanphamnhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4504,12 +4494,10 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
                 .addComponent(jButton11)
-                .addGap(22, 22, 22))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
-
-        Panelchitietnhaphang.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4566,17 +4554,17 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                             .addComponent(jTextField18, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                             .addComponent(jTextField19))
                         .addContainerGap())))
-            .addGroup(PanelchitietnhaphangLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
+            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(PanelchitietnhaphangLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(PanelchitietnhaphangLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
         PanelchitietnhaphangLayout.setVerticalGroup(
             PanelchitietnhaphangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4597,11 +4585,11 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                     .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
                 .addGroup(PanelchitietnhaphangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelNHLayout = new javax.swing.GroupLayout(panelNH);
@@ -4615,12 +4603,8 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         );
         panelNHLayout.setVerticalGroup(
             panelNHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNHLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelNHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(Panelchitietnhaphang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Panelsanphamnh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(39, Short.MAX_VALUE))
+            .addComponent(Panelsanphamnh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Panelchitietnhaphang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout PanelHienthiLayout = new javax.swing.GroupLayout(PanelHienthi);
@@ -4633,9 +4617,8 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(PanelHienthiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelHienthiLayout.createSequentialGroup()
-                    .addContainerGap()
                     .addComponent(panelKH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(32, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(PanelHienthiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelHienthiLayout.createSequentialGroup()
                     .addContainerGap()
@@ -4658,9 +4641,8 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                     .addContainerGap(28, Short.MAX_VALUE)))
             .addGroup(PanelHienthiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelHienthiLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(panelSP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(panelSP, javax.swing.GroupLayout.PREFERRED_SIZE, 1048, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 10, Short.MAX_VALUE)))
             .addGroup(PanelHienthiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelHienthiLayout.createSequentialGroup()
                     .addContainerGap()
@@ -4674,10 +4656,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addComponent(panelBH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(PanelHienthiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelHienthiLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(panelKH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(panelKH, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(PanelHienthiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelHienthiLayout.createSequentialGroup()
                     .addContainerGap()
@@ -4700,9 +4679,8 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addGroup(PanelHienthiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelHienthiLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(panelSP, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(38, Short.MAX_VALUE)))
+                    .addComponent(panelSP, javax.swing.GroupLayout.PREFERRED_SIZE, 574, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 40, Short.MAX_VALUE)))
             .addGroup(PanelHienthiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelHienthiLayout.createSequentialGroup()
                     .addContainerGap()
@@ -4716,9 +4694,9 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             HethongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HethongLayout.createSequentialGroup()
                 .addComponent(PanelMenuht, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(PanelHienthi, javax.swing.GroupLayout.PREFERRED_SIZE, 1038, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         HethongLayout.setVerticalGroup(
             HethongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4728,7 +4706,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        PanelHeader.setBackground(new java.awt.Color(30, 32, 43));
+        PanelHeader.setBackground(new java.awt.Color(37, 187, 219));
 
         txtHeader.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtHeader.setForeground(new java.awt.Color(255, 255, 255));
@@ -4738,7 +4716,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         PanelHeaderLayout.setHorizontalGroup(
             PanelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelHeaderLayout.createSequentialGroup()
-                .addContainerGap(680, Short.MAX_VALUE)
+                .addContainerGap(670, Short.MAX_VALUE)
                 .addComponent(txtHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(369, 369, 369))
         );
@@ -4755,16 +4733,13 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(Hethong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(Hethong, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PanelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addContainerGap(577, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(42, 42, 42)
@@ -4779,385 +4754,6 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         
         return s;
     }
-    private void btnDangxuatnvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangxuatnvActionPerformed
-        // TODO add your handling code here:
-       int i=JOptionPane.showConfirmDialog(this, "Bạn chắc chắn muốn đóng tài khoản");
-       if(i==JOptionPane.YES_OPTION){
-          dangnhap dn=new dangnhap();
-           dn.setVisible(true);
-           this.dispose();
-       }
-       else{
-           return;
-       }
-    }//GEN-LAST:event_btnDangxuatnvActionPerformed
-
-    private void labelBanhangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelBanhangMouseClicked
-        // TODO add your handling code here:
-        //        panelHienthi.removeAll();
-        //        panelHienthi.add(panelBH);
-        //        panelHienthi.repaint();
-        txtHeader.setText("QUẢN LÍ BÁN HÀNG");
-        PanelHienthi.removeAll();
-        PanelHienthi.add(panelBH);
-        PanelHienthi.repaint();
-        qlbhLeft.setBackground(new Color(102, 102, 102));
-        
-        qlnhLeft1.setBackground(null);
-       
-        qlhdLeft1.setBackground(null);
-        qllspLeft.setBackground(null);
-        
-       
-        qlnccLeft.setBackground(null);
-        
-        
-        qlspLeft1.setBackground(null);
-       
-       
-        
-        
-        PanelKhachhang.setBackground(null);
-        PanelNhaphang.setBackground(null);
-        PanelLoaisanpham.setBackground(null);
-       
-        PanelBanhang.setBackground(new Color(37, 171, 191));
-        
-        PanelHoadon.setBackground(null);
-        PanelNhacungcap.setBackground(null);
-        
-        PanelSanpham.setBackground(null);
-    }//GEN-LAST:event_labelBanhangMouseClicked
-
-    private void labelBanhangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelBanhangMouseEntered
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 102);
-        if (qlbhLeft.getBackground().toString().equals(s.toString())) {
-
-        } else {
-            qlbhLeft.setBackground(new Color(102, 102, 109));
-            PanelBanhang.setBackground(new Color(37, 171, 192));
-        }
-    }//GEN-LAST:event_labelBanhangMouseEntered
-
-    private void labelBanhangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelBanhangMouseExited
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 109);
-        if (qlbhLeft.getBackground().toString().equals(s.toString())) {
-            qlbhLeft.setBackground(null);
-            PanelBanhang.setBackground(null);
-        }
-    }//GEN-LAST:event_labelBanhangMouseExited
-
-    private void labelnhMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelnhMouseClicked
-        // TODO add your handling code here:
-        txtHeader.setText("QUẢN LÍ NHẬP HÀNG");
-        PanelHienthi.removeAll();
-        PanelHienthi.add(panelNH);
-        PanelHienthi.repaint();
-        PanelBanhang.setBackground(null);
-        qlbhLeft.setBackground(null);
-        qlkhLeft1.setBackground(null);
-        qlnhLeft1.setBackground(new Color(102, 102, 102));
-        
-        qllspLeft.setBackground(null);
-        
-        qlnccLeft.setBackground(null);
-        
-        qlspLeft1.setBackground(null);
-        
-       
-       
-        PanelKhachhang.setBackground(null);
-        PanelNhaphang.setBackground(new Color(37, 171, 191));
-        PanelLoaisanpham.setBackground(null);
-       
-        PanelBanhang.setBackground(null);
-       
-        PanelHoadon.setBackground(null);
-        PanelNhacungcap.setBackground(null);
-        
-        PanelSanpham.setBackground(null);
-    }//GEN-LAST:event_labelnhMouseClicked
-
-    private void labelnhMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelnhMouseEntered
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 102);
-        if (qlnhLeft1.getBackground().toString().equals(s.toString())) {
-
-        } else {
-            qlnhLeft1.setBackground(new Color(102, 102, 109));
-            PanelNhaphang.setBackground(new Color(37, 171, 192));
-        }
-    }//GEN-LAST:event_labelnhMouseEntered
-
-    private void labelnhMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelnhMouseExited
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 109);
-        if (qlnhLeft1.getBackground().toString().equals(s.toString())) {
-            qlnhLeft1.setBackground(null);
-            PanelNhaphang.setBackground(null);
-        }
-    }//GEN-LAST:event_labelnhMouseExited
-
-    private void LabelspMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelspMouseClicked
-        // TODO add your handling code here:
-        //        PanelHienthi.removeAll();
-        //        PanelHienthi.add(panelSP);
-        //        PanelHienthi.repaint();
-
-        //             **************'
-        txtHeader.setText("QUẢN LÍ SẢN PHẨM");
-        PanelHienthi.removeAll();
-        PanelHienthi.add(panelSP);
-        PanelHienthi.repaint();
-        qlbhLeft.setBackground(null);
-        qlkhLeft1.setBackground(null);
-        qlnhLeft1.setBackground(null);
-      
-        qllspLeft.setBackground(null);
-       
-        qlnccLeft.setBackground(null);
-        
-
-        qlspLeft1.setBackground(new Color(102, 102, 102));
-       
-        PanelKhachhang.setBackground(null);
-        PanelNhaphang.setBackground(null);
-        PanelLoaisanpham.setBackground(null);
-        
-        PanelBanhang.setBackground(null);
-        
-        PanelHoadon.setBackground(null);
-        PanelNhacungcap.setBackground(null);
-        
-        PanelSanpham.setBackground(new Color(37, 171, 191));
-    }//GEN-LAST:event_LabelspMouseClicked
-
-    private void LabelspMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelspMouseEntered
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 102);
-        if (qlspLeft1.getBackground().toString().equals(s.toString())) {
-
-        } else {
-            qlspLeft1.setBackground(new Color(102, 102, 109));
-            PanelSanpham.setBackground(new Color(37, 171, 192));
-        }
-    }//GEN-LAST:event_LabelspMouseEntered
-
-    private void LabelspMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelspMouseExited
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 109);
-        if (qlspLeft1.getBackground().toString().equals(s.toString())) {
-            qlspLeft1.setBackground(null);
-            PanelSanpham.setBackground(null);
-        }
-    }//GEN-LAST:event_LabelspMouseExited
-
-    private void labelLoaisanphamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelLoaisanphamMouseClicked
-        // TODO add your handling code here:
-        txtHeader.setText("QUẢN LÍ LOẠI SẢN PHẨM");
-        PanelHienthi.removeAll();
-        PanelHienthi.add(panelLSP);
-        PanelHienthi.repaint();
-        PanelBanhang.setBackground(null);
-        qlbhLeft.setBackground(null);
-        qlkhLeft1.setBackground(null);
-        qlnhLeft1.setBackground(null);
-       
-        qllspLeft.setBackground(new Color(102, 102, 102));
-        
-        qlnccLeft.setBackground(null);
-        
-        qlspLeft1.setBackground(null);
-       
-        PanelKhachhang.setBackground(null);
-        PanelNhaphang.setBackground(null);
-        PanelLoaisanpham.setBackground(new Color(37, 171, 191));
-       
-        PanelBanhang.setBackground(null);
-        
-        PanelHoadon.setBackground(null);
-        PanelNhacungcap.setBackground(null);
-       
-        PanelSanpham.setBackground(null);
-    }//GEN-LAST:event_labelLoaisanphamMouseClicked
-
-    private void labelLoaisanphamMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelLoaisanphamMouseEntered
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 102);
-        if (qllspLeft.getBackground().toString().equals(s.toString())) {
-
-        } else {
-            qllspLeft.setBackground(new Color(102, 102, 109));
-            PanelLoaisanpham.setBackground(new Color(37, 171, 192));
-        }
-    }//GEN-LAST:event_labelLoaisanphamMouseEntered
-
-    private void labelLoaisanphamMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelLoaisanphamMouseExited
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 109);
-        if (qllspLeft.getBackground().toString().equals(s.toString())) {
-            qllspLeft.setBackground(null);
-            PanelLoaisanpham.setBackground(null);
-        }
-    }//GEN-LAST:event_labelLoaisanphamMouseExited
-
-    private void labelqlhdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelqlhdMouseClicked
-        // TODO add your handling code here:
-        txtHeader.setText("QUẢN LÍ HÓA ĐƠN");
-        PanelHienthi.removeAll();
-        PanelHienthi.add(panelHD);
-        PanelHienthi.repaint();
-        PanelBanhang.setBackground(null);
-        qlbhLeft.setBackground(null);
-        qlkhLeft1.setBackground(null);
-        qlnhLeft1.setBackground(null);
-        
-        qlhdLeft1.setBackground(new Color(102, 102, 102));
-        qllspLeft.setBackground(null);
-       
-        qlnccLeft.setBackground(null);
-       
-        qlspLeft1.setBackground(null);
-        
-        PanelKhachhang.setBackground(null);
-        PanelNhaphang.setBackground(null);
-        PanelLoaisanpham.setBackground(null);
-      
-        PanelBanhang.setBackground(null);
-       
-        PanelHoadon.setBackground(new Color(37, 171, 191));
-        PanelNhacungcap.setBackground(null);
-       
-        PanelSanpham.setBackground(null);
-    }//GEN-LAST:event_labelqlhdMouseClicked
-
-    private void labelqlhdMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelqlhdMouseEntered
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 102);
-        if (qlhdLeft1.getBackground().toString().equals(s.toString())) {
-
-        } else {
-            qlhdLeft1.setBackground(new Color(102, 102, 109));
-            PanelHoadon.setBackground(new Color(37, 171, 192));
-        }
-    }//GEN-LAST:event_labelqlhdMouseEntered
-
-    private void labelqlhdMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelqlhdMouseExited
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 109);
-        if (qlhdLeft1.getBackground().toString().equals(s.toString())) {
-            qlhdLeft1.setBackground(null);
-            PanelHoadon.setBackground(null);
-        }
-    }//GEN-LAST:event_labelqlhdMouseExited
-
-    private void labelNhacungcapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelNhacungcapMouseClicked
-        // TODO add your handling code here:
-        txtHeader.setText("QUẢN LÍ NHÀ CUNG CẤP");
-        PanelHienthi.removeAll();
-        PanelHienthi.add(panelNCC);
-        PanelHienthi.repaint();
-        PanelBanhang.setBackground(null);
-        qlbhLeft.setBackground(null);
-        qlkhLeft1.setBackground(null);
-        qlnhLeft1.setBackground(null);
-       
-        qlhdLeft1.setBackground(null);
-        qllspLeft.setBackground(null);
-       
-        qlnccLeft.setBackground(new Color(102, 102, 102));
-       
-        qlspLeft1.setBackground(null);
-       
-        PanelKhachhang.setBackground(null);
-        PanelNhaphang.setBackground(null);
-        PanelLoaisanpham.setBackground(null);
-        
-        PanelBanhang.setBackground(null);
-        
-        PanelHoadon.setBackground(null);
-        PanelNhacungcap.setBackground(new Color(37, 171, 191));
-       
-        PanelSanpham.setBackground(null);
-    }//GEN-LAST:event_labelNhacungcapMouseClicked
-
-    private void labelNhacungcapMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelNhacungcapMouseEntered
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 102);
-        if (qlnccLeft.getBackground().toString().equals(s.toString())) {
-
-        } else {
-            qlnccLeft.setBackground(new Color(102, 102, 109));
-            PanelNhacungcap.setBackground(new Color(37, 171, 192));
-        }
-    }//GEN-LAST:event_labelNhacungcapMouseEntered
-
-    private void labelNhacungcapMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelNhacungcapMouseExited
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 109);
-        if (qlnccLeft.getBackground().toString().equals(s.toString())) {
-            qlnccLeft.setBackground(null);
-            PanelNhacungcap.setBackground(null);
-        }
-    }//GEN-LAST:event_labelNhacungcapMouseExited
-
-    private void lbkhachhangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbkhachhangMouseClicked
-        // TODO add your handling code here:
-        txtHeader.setText("QUẢN LÍ KHÁCH HÀNG");
-        PanelHienthi.removeAll();
-        PanelHienthi.add(panelKH);
-        PanelHienthi.repaint();
-        PanelBanhang.setBackground(null);
-        qlbhLeft.setBackground(null);
-        qlkhLeft1.setBackground(new Color(102, 102, 102));
-        qlnhLeft1.setBackground(null);
-        
-        qlhdLeft1.setBackground(null);
-        qllspLeft.setBackground(null);
-        
-        qlnccLeft.setBackground(null);
-       
-        qlspLeft1.setBackground(null);
-       
-        PanelKhachhang.setBackground(new Color(37, 171, 191));
-        PanelNhaphang.setBackground(null);
-        PanelLoaisanpham.setBackground(null);
-        
-        PanelBanhang.setBackground(null);
-        
-        PanelHoadon.setBackground(null);
-        PanelNhacungcap.setBackground(null);
-        
-        PanelSanpham.setBackground(null);
-    }//GEN-LAST:event_lbkhachhangMouseClicked
-
-    private void lbkhachhangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbkhachhangMouseEntered
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 102);
-        if (qlkhLeft1.getBackground().toString().equals(s.toString())) {
-
-        } else {
-            qlkhLeft1.setBackground(new Color(102, 102, 109));
-            PanelKhachhang.setBackground(new Color(37, 171, 192));
-        }
-    }//GEN-LAST:event_lbkhachhangMouseEntered
-
-    private void lbkhachhangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbkhachhangMouseExited
-        // TODO add your handling code here:
-        Color s = new Color(102, 102, 109);
-        if (qlkhLeft1.getBackground().toString().equals(s.toString())) {
-            qlkhLeft1.setBackground(null);
-            PanelKhachhang.setBackground(null);
-        }
-    }//GEN-LAST:event_lbkhachhangMouseExited
-
-    private void btnExitnvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitnvActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_btnExitnvActionPerformed
-
     private void btnThemKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemKHActionPerformed
         // TODO add your handling code here:
         addKhachhang.setVisible(true);
@@ -5431,6 +5027,381 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
     private void rdNam2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdNam2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rdNam2ActionPerformed
+
+    private void btnExitnvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitnvActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btnExitnvActionPerformed
+
+    private void lbkhachhangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbkhachhangMouseExited
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 109);
+        if (qlkhLeft1.getBackground().toString().equals(s.toString())) {
+            qlkhLeft1.setBackground(null);
+            PanelKhachhang.setBackground(null);
+        }
+    }//GEN-LAST:event_lbkhachhangMouseExited
+
+    private void lbkhachhangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbkhachhangMouseEntered
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 102);
+        if (qlkhLeft1.getBackground().toString().equals(s.toString())) {
+
+        } else {
+            qlkhLeft1.setBackground(new Color(102, 102, 109));
+            PanelKhachhang.setBackground(new Color(37, 171, 192));
+        }
+    }//GEN-LAST:event_lbkhachhangMouseEntered
+
+    private void lbkhachhangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbkhachhangMouseClicked
+        // TODO add your handling code here:
+        txtHeader.setText("QUẢN LÍ KHÁCH HÀNG");
+        PanelHienthi.removeAll();
+        PanelHienthi.add(panelKH);
+        PanelHienthi.repaint();
+        PanelBanhang.setBackground(null);
+        qlbhLeft.setBackground(null);
+        qlkhLeft1.setBackground(new Color(102, 102, 102));
+        qlnhLeft1.setBackground(null);
+
+        qlhdLeft1.setBackground(null);
+        qllspLeft.setBackground(null);
+
+        qlnccLeft.setBackground(null);
+
+        qlspLeft1.setBackground(null);
+
+        PanelKhachhang.setBackground(new Color(37, 171, 191));
+        PanelNhaphang.setBackground(null);
+        PanelLoaisanpham.setBackground(null);
+
+        PanelBanhang.setBackground(null);
+
+        PanelHoadon.setBackground(null);
+        PanelNhacungcap.setBackground(null);
+
+        PanelSanpham.setBackground(null);
+    }//GEN-LAST:event_lbkhachhangMouseClicked
+
+    private void labelNhacungcapMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelNhacungcapMouseExited
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 109);
+        if (qlnccLeft.getBackground().toString().equals(s.toString())) {
+            qlnccLeft.setBackground(null);
+            PanelNhacungcap.setBackground(null);
+        }
+    }//GEN-LAST:event_labelNhacungcapMouseExited
+
+    private void labelNhacungcapMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelNhacungcapMouseEntered
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 102);
+        if (qlnccLeft.getBackground().toString().equals(s.toString())) {
+
+        } else {
+            qlnccLeft.setBackground(new Color(102, 102, 109));
+            PanelNhacungcap.setBackground(new Color(37, 171, 192));
+        }
+    }//GEN-LAST:event_labelNhacungcapMouseEntered
+
+    private void labelNhacungcapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelNhacungcapMouseClicked
+        // TODO add your handling code here:
+        txtHeader.setText("QUẢN LÍ NHÀ CUNG CẤP");
+        PanelHienthi.removeAll();
+        PanelHienthi.add(panelNCC);
+        PanelHienthi.repaint();
+        PanelBanhang.setBackground(null);
+        qlbhLeft.setBackground(null);
+        qlkhLeft1.setBackground(null);
+        qlnhLeft1.setBackground(null);
+
+        qlhdLeft1.setBackground(null);
+        qllspLeft.setBackground(null);
+
+        qlnccLeft.setBackground(new Color(102, 102, 102));
+
+        qlspLeft1.setBackground(null);
+
+        PanelKhachhang.setBackground(null);
+        PanelNhaphang.setBackground(null);
+        PanelLoaisanpham.setBackground(null);
+
+        PanelBanhang.setBackground(null);
+
+        PanelHoadon.setBackground(null);
+        PanelNhacungcap.setBackground(new Color(37, 171, 191));
+
+        PanelSanpham.setBackground(null);
+    }//GEN-LAST:event_labelNhacungcapMouseClicked
+
+    private void labelqlhdMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelqlhdMouseExited
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 109);
+        if (qlhdLeft1.getBackground().toString().equals(s.toString())) {
+            qlhdLeft1.setBackground(null);
+            PanelHoadon.setBackground(null);
+        }
+    }//GEN-LAST:event_labelqlhdMouseExited
+
+    private void labelqlhdMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelqlhdMouseEntered
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 102);
+        if (qlhdLeft1.getBackground().toString().equals(s.toString())) {
+
+        } else {
+            qlhdLeft1.setBackground(new Color(102, 102, 109));
+            PanelHoadon.setBackground(new Color(37, 171, 192));
+        }
+    }//GEN-LAST:event_labelqlhdMouseEntered
+
+    private void labelqlhdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelqlhdMouseClicked
+        // TODO add your handling code here:
+        txtHeader.setText("QUẢN LÍ HÓA ĐƠN");
+        PanelHienthi.removeAll();
+        PanelHienthi.add(panelHD);
+        PanelHienthi.repaint();
+        PanelBanhang.setBackground(null);
+        qlbhLeft.setBackground(null);
+        qlkhLeft1.setBackground(null);
+        qlnhLeft1.setBackground(null);
+
+        qlhdLeft1.setBackground(new Color(102, 102, 102));
+        qllspLeft.setBackground(null);
+
+        qlnccLeft.setBackground(null);
+
+        qlspLeft1.setBackground(null);
+
+        PanelKhachhang.setBackground(null);
+        PanelNhaphang.setBackground(null);
+        PanelLoaisanpham.setBackground(null);
+
+        PanelBanhang.setBackground(null);
+
+        PanelHoadon.setBackground(new Color(37, 171, 191));
+        PanelNhacungcap.setBackground(null);
+
+        PanelSanpham.setBackground(null);
+    }//GEN-LAST:event_labelqlhdMouseClicked
+
+    private void labelLoaisanphamMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelLoaisanphamMouseExited
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 109);
+        if (qllspLeft.getBackground().toString().equals(s.toString())) {
+            qllspLeft.setBackground(null);
+            PanelLoaisanpham.setBackground(null);
+        }
+    }//GEN-LAST:event_labelLoaisanphamMouseExited
+
+    private void labelLoaisanphamMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelLoaisanphamMouseEntered
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 102);
+        if (qllspLeft.getBackground().toString().equals(s.toString())) {
+
+        } else {
+            qllspLeft.setBackground(new Color(102, 102, 109));
+            PanelLoaisanpham.setBackground(new Color(37, 171, 192));
+        }
+    }//GEN-LAST:event_labelLoaisanphamMouseEntered
+
+    private void labelLoaisanphamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelLoaisanphamMouseClicked
+        // TODO add your handling code here:
+        txtHeader.setText("QUẢN LÍ LOẠI SẢN PHẨM");
+        PanelHienthi.removeAll();
+        PanelHienthi.add(panelLSP);
+        PanelHienthi.repaint();
+        PanelBanhang.setBackground(null);
+        qlbhLeft.setBackground(null);
+        qlkhLeft1.setBackground(null);
+        qlnhLeft1.setBackground(null);
+
+        qllspLeft.setBackground(new Color(102, 102, 102));
+
+        qlnccLeft.setBackground(null);
+
+        qlspLeft1.setBackground(null);
+
+        PanelKhachhang.setBackground(null);
+        PanelNhaphang.setBackground(null);
+        PanelLoaisanpham.setBackground(new Color(37, 171, 191));
+
+        PanelBanhang.setBackground(null);
+
+        PanelHoadon.setBackground(null);
+        PanelNhacungcap.setBackground(null);
+
+        PanelSanpham.setBackground(null);
+    }//GEN-LAST:event_labelLoaisanphamMouseClicked
+
+    private void LabelspMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelspMouseExited
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 109);
+        if (qlspLeft1.getBackground().toString().equals(s.toString())) {
+            qlspLeft1.setBackground(null);
+            PanelSanpham.setBackground(null);
+        }
+    }//GEN-LAST:event_LabelspMouseExited
+
+    private void LabelspMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelspMouseEntered
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 102);
+        if (qlspLeft1.getBackground().toString().equals(s.toString())) {
+
+        } else {
+            qlspLeft1.setBackground(new Color(102, 102, 109));
+            PanelSanpham.setBackground(new Color(37, 171, 192));
+        }
+    }//GEN-LAST:event_LabelspMouseEntered
+
+    private void LabelspMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelspMouseClicked
+        // TODO add your handling code here:
+        //        PanelHienthi.removeAll();
+        //        PanelHienthi.add(panelSP);
+        //        PanelHienthi.repaint();
+
+        //             **************'
+        txtHeader.setText("QUẢN LÍ SẢN PHẨM");
+        PanelHienthi.removeAll();
+        PanelHienthi.add(panelSP);
+        PanelHienthi.repaint();
+        qlbhLeft.setBackground(null);
+        qlkhLeft1.setBackground(null);
+        qlnhLeft1.setBackground(null);
+
+        qllspLeft.setBackground(null);
+
+        qlnccLeft.setBackground(null);
+
+        qlspLeft1.setBackground(new Color(102, 102, 102));
+
+        PanelKhachhang.setBackground(null);
+        PanelNhaphang.setBackground(null);
+        PanelLoaisanpham.setBackground(null);
+
+        PanelBanhang.setBackground(null);
+
+        PanelHoadon.setBackground(null);
+        PanelNhacungcap.setBackground(null);
+
+        PanelSanpham.setBackground(new Color(37, 171, 191));
+    }//GEN-LAST:event_LabelspMouseClicked
+
+    private void labelnhMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelnhMouseExited
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 109);
+        if (qlnhLeft1.getBackground().toString().equals(s.toString())) {
+            qlnhLeft1.setBackground(null);
+            PanelNhaphang.setBackground(null);
+        }
+    }//GEN-LAST:event_labelnhMouseExited
+
+    private void labelnhMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelnhMouseEntered
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 102);
+        if (qlnhLeft1.getBackground().toString().equals(s.toString())) {
+
+        } else {
+            qlnhLeft1.setBackground(new Color(102, 102, 109));
+            PanelNhaphang.setBackground(new Color(37, 171, 192));
+        }
+    }//GEN-LAST:event_labelnhMouseEntered
+
+    private void labelnhMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelnhMouseClicked
+        // TODO add your handling code here:
+        txtHeader.setText("QUẢN LÍ NHẬP HÀNG");
+        PanelHienthi.removeAll();
+        PanelHienthi.add(panelNH);
+        PanelHienthi.repaint();
+        PanelBanhang.setBackground(null);
+        qlbhLeft.setBackground(null);
+        qlkhLeft1.setBackground(null);
+        qlnhLeft1.setBackground(new Color(102, 102, 102));
+
+        qllspLeft.setBackground(null);
+
+        qlnccLeft.setBackground(null);
+
+        qlspLeft1.setBackground(null);
+
+        PanelKhachhang.setBackground(null);
+        PanelNhaphang.setBackground(new Color(37, 171, 191));
+        PanelLoaisanpham.setBackground(null);
+
+        PanelBanhang.setBackground(null);
+
+        PanelHoadon.setBackground(null);
+        PanelNhacungcap.setBackground(null);
+
+        PanelSanpham.setBackground(null);
+    }//GEN-LAST:event_labelnhMouseClicked
+
+    private void labelBanhangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelBanhangMouseExited
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 109);
+        if (qlbhLeft.getBackground().toString().equals(s.toString())) {
+            qlbhLeft.setBackground(null);
+            PanelBanhang.setBackground(null);
+        }
+    }//GEN-LAST:event_labelBanhangMouseExited
+
+    private void labelBanhangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelBanhangMouseEntered
+        // TODO add your handling code here:
+        Color s = new Color(102, 102, 102);
+        if (qlbhLeft.getBackground().toString().equals(s.toString())) {
+
+        } else {
+            qlbhLeft.setBackground(new Color(102, 102, 109));
+            PanelBanhang.setBackground(new Color(37, 171, 192));
+        }
+    }//GEN-LAST:event_labelBanhangMouseEntered
+
+    private void labelBanhangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelBanhangMouseClicked
+        // TODO add your handling code here:
+        //        panelHienthi.removeAll();
+        //        panelHienthi.add(panelBH);
+        //        panelHienthi.repaint();
+        txtHeader.setText("QUẢN LÍ BÁN HÀNG");
+        PanelHienthi.removeAll();
+        PanelHienthi.add(panelBH);
+        PanelHienthi.repaint();
+        qlbhLeft.setBackground(new Color(102, 102, 102));
+
+        qlnhLeft1.setBackground(null);
+
+        qlhdLeft1.setBackground(null);
+        qllspLeft.setBackground(null);
+
+        qlnccLeft.setBackground(null);
+
+        qlspLeft1.setBackground(null);
+
+        PanelKhachhang.setBackground(null);
+        PanelNhaphang.setBackground(null);
+        PanelLoaisanpham.setBackground(null);
+
+        PanelBanhang.setBackground(new Color(37, 171, 191));
+
+        PanelHoadon.setBackground(null);
+        PanelNhacungcap.setBackground(null);
+
+        PanelSanpham.setBackground(null);
+    }//GEN-LAST:event_labelBanhangMouseClicked
+
+    private void btnDangxuatnvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangxuatnvActionPerformed
+        // TODO add your handling code here:
+        int i=JOptionPane.showConfirmDialog(this, "Bạn chắc chắn muốn đóng tài khoản");
+        if(i==JOptionPane.YES_OPTION){
+            dangnhap dn=new dangnhap();
+            dn.setVisible(true);
+            this.dispose();
+        }
+        else{
+            return;
+        }
+    }//GEN-LAST:event_btnDangxuatnvActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
     
 
     /**
