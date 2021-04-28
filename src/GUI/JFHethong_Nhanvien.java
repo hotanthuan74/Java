@@ -440,7 +440,6 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         PanelKhachhang = new javax.swing.JPanel();
         lbkhachhang = new javax.swing.JLabel();
         qlkhLeft1 = new javax.swing.JPanel();
-        btnExitnv = new javax.swing.JButton();
         PanelHienthi = new javax.swing.JPanel();
         panelBH = new javax.swing.JPanel();
         Panelsanpham = new javax.swing.JPanel();
@@ -552,6 +551,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         jTable9 = new javax.swing.JTable();
         PanelHeader = new javax.swing.JPanel();
         txtHeader = new javax.swing.JLabel();
+        btnExitnv = new javax.swing.JButton();
 
         addTaikhoan.setUndecorated(true);
 
@@ -3180,8 +3180,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBanhangLayout.createSequentialGroup()
                 .addComponent(qlbhLeft, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelBanhang, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(labelBanhang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelBanhangLayout.setVerticalGroup(
             PanelBanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3238,8 +3237,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelNhaphangLayout.createSequentialGroup()
                 .addComponent(qlnhLeft1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelnh, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(labelnh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelNhaphangLayout.setVerticalGroup(
             PanelNhaphangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3290,8 +3288,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelSanphamLayout.createSequentialGroup()
                 .addComponent(qlspLeft1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Labelsp, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Labelsp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelSanphamLayout.setVerticalGroup(
             PanelSanphamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3341,9 +3338,8 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             PanelLoaisanphamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelLoaisanphamLayout.createSequentialGroup()
                 .addComponent(qllspLeft, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(labelLoaisanpham, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelLoaisanpham, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelLoaisanphamLayout.setVerticalGroup(
             PanelLoaisanphamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3395,7 +3391,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addComponent(qlhdLeft1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelqlhd, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         PanelHoadonLayout.setVerticalGroup(
             PanelHoadonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3446,8 +3442,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelNhacungcapLayout.createSequentialGroup()
                 .addComponent(qlnccLeft, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelNhacungcap, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(labelNhacungcap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelNhacungcapLayout.setVerticalGroup(
             PanelNhacungcapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3498,21 +3493,13 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKhachhangLayout.createSequentialGroup()
                 .addComponent(qlkhLeft1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbkhachhang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(lbkhachhang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelKhachhangLayout.setVerticalGroup(
             PanelKhachhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbkhachhang, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
             .addComponent(qlkhLeft1, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
         );
-
-        btnExitnv.setText("Thoát");
-        btnExitnv.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExitnvActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -3525,10 +3512,6 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
             .addComponent(PanelHoadon, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
             .addComponent(PanelNhacungcap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PanelKhachhang, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(btnExitnv)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3547,9 +3530,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addComponent(PanelNhacungcap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PanelKhachhang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnExitnv)
-                .addContainerGap())
+                .addGap(45, 45, 45))
         );
 
         javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
@@ -4711,20 +4692,33 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         txtHeader.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtHeader.setForeground(new java.awt.Color(255, 255, 255));
 
+        btnExitnv.setForeground(new java.awt.Color(255, 51, 51));
+        btnExitnv.setText("X");
+        btnExitnv.setActionCommand("X");
+        btnExitnv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitnvActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelHeaderLayout = new javax.swing.GroupLayout(PanelHeader);
         PanelHeader.setLayout(PanelHeaderLayout);
         PanelHeaderLayout.setHorizontalGroup(
             PanelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelHeaderLayout.createSequentialGroup()
-                .addContainerGap(670, Short.MAX_VALUE)
+                .addContainerGap(692, Short.MAX_VALUE)
                 .addComponent(txtHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(369, 369, 369))
+                .addGap(308, 308, 308)
+                .addComponent(btnExitnv))
         );
         PanelHeaderLayout.setVerticalGroup(
             PanelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelHeaderLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+            .addGroup(PanelHeaderLayout.createSequentialGroup()
+                .addComponent(btnExitnv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -5215,7 +5209,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         qlnhLeft1.setBackground(null);
 
         qllspLeft.setBackground(new Color(102, 102, 102));
-
+qlhdLeft1.setBackground(null);
         qlnccLeft.setBackground(null);
 
         qlspLeft1.setBackground(null);
@@ -5266,7 +5260,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         qlbhLeft.setBackground(null);
         qlkhLeft1.setBackground(null);
         qlnhLeft1.setBackground(null);
-
+        qlhdLeft1.setBackground(null);
         qllspLeft.setBackground(null);
 
         qlnccLeft.setBackground(null);
@@ -5278,7 +5272,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         PanelLoaisanpham.setBackground(null);
 
         PanelBanhang.setBackground(null);
-
+        
         PanelHoadon.setBackground(null);
         PanelNhacungcap.setBackground(null);
 
@@ -5315,7 +5309,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         qlbhLeft.setBackground(null);
         qlkhLeft1.setBackground(null);
         qlnhLeft1.setBackground(new Color(102, 102, 102));
-
+qlhdLeft1.setBackground(null);
         qllspLeft.setBackground(null);
 
         qlnccLeft.setBackground(null);

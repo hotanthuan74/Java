@@ -463,7 +463,6 @@ public class JFHethong_admin extends javax.swing.JFrame {
         PanelCaidat = new javax.swing.JPanel();
         labelCaidat = new javax.swing.JLabel();
         qlcaidatLeft = new javax.swing.JPanel();
-        btnExit = new javax.swing.JButton();
         PanelHienthi = new javax.swing.JPanel();
         panelBH = new javax.swing.JPanel();
         Panelsanpham = new javax.swing.JPanel();
@@ -613,6 +612,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
         PanelHeader = new javax.swing.JPanel();
         txtHeader = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        btnExit = new javax.swing.JButton();
 
         addNhanvien.setUndecorated(true);
 
@@ -3948,13 +3948,6 @@ public class JFHethong_admin extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel3);
 
-        btnExit.setText("Thoát");
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExitActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
         panelMenu.setLayout(panelMenuLayout);
         panelMenuLayout.setHorizontalGroup(
@@ -3962,9 +3955,6 @@ public class JFHethong_admin extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
             .addGroup(panelMenuLayout.createSequentialGroup()
                 .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelMenuLayout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addComponent(btnExit))
                     .addGroup(panelMenuLayout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -3982,8 +3972,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 .addComponent(btnDangxuat)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnExit))
+                .addGap(29, 29, 29))
         );
 
         javax.swing.GroupLayout PanelMenuhtLayout = new javax.swing.GroupLayout(PanelMenuht);
@@ -4143,7 +4132,9 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(PanelchithietbanhangLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(PanelchithietbanhangLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4175,7 +4166,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelBHLayout = new javax.swing.GroupLayout(panelBH);
@@ -5540,6 +5531,13 @@ public class JFHethong_admin extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Admin");
 
+        btnExit.setText("X");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelHeaderLayout = new javax.swing.GroupLayout(PanelHeader);
         PanelHeader.setLayout(PanelHeaderLayout);
         PanelHeaderLayout.setHorizontalGroup(
@@ -5548,7 +5546,9 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 .addGap(90, 90, 90)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 1019, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(txtHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 1019, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(btnExit))
         );
         PanelHeaderLayout.setVerticalGroup(
             PanelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5556,6 +5556,9 @@ public class JFHethong_admin extends javax.swing.JFrame {
             .addGroup(PanelHeaderLayout.createSequentialGroup()
                 .addGap(0, 17, Short.MAX_VALUE)
                 .addComponent(jLabel1))
+            .addGroup(PanelHeaderLayout.createSequentialGroup()
+                .addComponent(btnExit)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
