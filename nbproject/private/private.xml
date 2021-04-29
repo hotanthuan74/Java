@@ -6,6 +6,7 @@
             <file>file:/C:/code/doAnJava/src/BUS/PhieunhaphangBUS.java</file>
             <file>file:/C:/code/doAnJava/src/DTO/PhieunhaphangDTO.java</file>
             <file>file:/C:/code/doAnJava/src/BUS/ChitietphieunhapBUS.java</file>
+            <file>file:/C:/code/doAnJava/src/DTO/NhanvienDTO.java</file>
             <file>file:/C:/code/doAnJava/src/DTO/KhuyenmaiDTO.java</file>
             <file>file:/C:/code/doAnJava/src/BUS/ChitietloaisanphamBUS.java</file>
             <file>file:/C:/code/doAnJava/src/DAO/SanphamDAO.java</file>
@@ -23,6 +24,7 @@
             <file>file:/C:/code/doAnJava/src/DAO/KhachhangDAO.java</file>
             <file>file:/C:/code/doAnJava/src/DAO/NhanvienDAO.java</file>
             <file>file:/C:/code/doAnJava/src/GUI/JFHethong_admin.java</file>
+            <file>file:/C:/code/doAnJava/src/BUS/NhanvienBUS.java</file>
             <file>file:/C:/code/doAnJava/src/BUS/KhachhangBUS.java</file>
             <file>file:/C:/code/doAnJava/src/GUI/JFHethong_Nhanvien.java</file>
             <file>file:/C:/code/doAnJava/src/DAO/DB_ConnectionDAO.java</file>
