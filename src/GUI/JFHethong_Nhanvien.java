@@ -99,31 +99,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
     public void cbblsp(){
         
     }
-    public void showSP(){
-        Vector header = new Vector();
-        header.add("ID Sản phẩm");
-        header.add("Loại sản phẩm");
-        header.add("Tên sản phẩm");
-        header.add("Giá");
-        header.add("Số lượng");
-        if (modelsp.getRowCount() == 0) {
-
-            modelsp = new DefaultTableModel(header, 0);
-        }
-
-        for (int i = 0; i < listSP.size(); i++) {
-            Object[] row = new Object[9];
-            row[0] = (listSP.get(i).getId_sanpham());
-            row[1] = (listSP.get(i).getTen_sp());
-            row[2] = ((listSP.get(i).getId_loaisanpham()));
-            row[3] = (listSP.get(i).getGia_sp());
-            row[4] = (listSP.get(i).getDonvitinh_sp());
-            row[5] = (listSP.get(i).getSoluong_sp());
-            modelsp.addRow(row);
-
-        }
-        tblSP.setModel(modelsp);
-    }
+    
     
   
    
