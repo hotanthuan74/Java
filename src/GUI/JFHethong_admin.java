@@ -5,8 +5,10 @@
  */
 package GUI;
 
+import BUS.SanphamBUS;
 import DAO.NhanvienDAO;
 import DAO.SanphamDAO;
+import DTO.SanphamDTO;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Panel;
@@ -26,9 +28,10 @@ import javax.swing.table.*;
 public class JFHethong_admin extends javax.swing.JFrame {
 
     DefaultTableModel model = new DefaultTableModel();
-    DefaultTableModel modelsp = new DefaultTableModel();
+    DefaultTableModel modelbh = new DefaultTableModel();
 
     int select = 0;
+    double txTong = 0;
 
     /**
      * Creates new form NewJFrame
@@ -45,9 +48,10 @@ public class JFHethong_admin extends javax.swing.JFrame {
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
-
+        
         initComponents();
-
+        showBH();
+        
         setLocationRelativeTo(null);
         PanelBanhang.setBackground(new Color(37, 171, 191));
         qlbhLeft.setBackground(new Color(102, 102, 102));
@@ -106,7 +110,32 @@ public class JFHethong_admin extends javax.swing.JFrame {
     public void cbblsp() {
 
     }
+    public void showBH() {
+        ArrayList<SanphamDTO> listSP = new SanphamBUS().getList();
 
+        Vector header = new Vector();
+        header.add("ID Sản phẩm");
+        header.add("Loại sản phẩm");
+        header.add("Tên sản phẩm");
+        header.add("Giá");
+        header.add("Số lượng");
+        if (model.getRowCount() == 0) {
+
+            model = new DefaultTableModel(header, 0);
+        }
+
+        for (int i = 0; i < listSP.size(); i++) {
+            Object[] row = new Object[6];
+            row[0] = (listSP.get(i).getIdSanphamDTO());
+            row[1] = ((listSP.get(i).getIdLoaiSanphamDTO().getTenLoaiSanphamDTO()));
+            row[2] = (listSP.get(i).getTensanphamDTO());
+            row[3] = (listSP.get(i).getDongiasanphamDTO());
+            row[4] = (listSP.get(i).getSoluongsanphamDTO());
+            model.addRow(row);
+
+        }
+        tblBhLeft.setModel(model);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -472,11 +501,11 @@ public class JFHethong_admin extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         tblBhLeft = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
+        btnBhThem = new javax.swing.JButton();
         Panelchithietbanhang = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        txTongBh = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
@@ -485,7 +514,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        tblBhRight = new javax.swing.JTable();
         panelKH = new javax.swing.JPanel();
         btnThemKH = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
@@ -4037,9 +4066,14 @@ public class JFHethong_admin extends javax.swing.JFrame {
         ));
         jScrollPane5.setViewportView(tblBhLeft);
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_add_30px.png"))); // NOI18N
-        jButton3.setText("Thêm");
+        btnBhThem.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnBhThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_add_30px.png"))); // NOI18N
+        btnBhThem.setText("Thêm");
+        btnBhThem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBhThemActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelsanphamLayout = new javax.swing.GroupLayout(Panelsanpham);
         Panelsanpham.setLayout(PanelsanphamLayout);
@@ -4053,7 +4087,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(PanelsanphamLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBhThem, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelsanphamLayout.setVerticalGroup(
@@ -4064,7 +4098,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(jButton3)
+                .addComponent(btnBhThem)
                 .addContainerGap(111, Short.MAX_VALUE))
         );
 
@@ -4074,7 +4108,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
 
         jTextField7.setBorder(javax.swing.BorderFactory.createTitledBorder("Mã hóa đơn"));
 
-        jTextField8.setBorder(javax.swing.BorderFactory.createTitledBorder("Tổng tiền"));
+        txTongBh.setBorder(javax.swing.BorderFactory.createTitledBorder("Tổng tiền"));
 
         jTextField9.setBorder(javax.swing.BorderFactory.createTitledBorder("Khách hàng"));
 
@@ -4092,7 +4126,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_us_dollar_30px.png"))); // NOI18N
         jButton7.setText("Thanh toán");
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        tblBhRight.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -4103,7 +4137,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 "STT", "Mã hóa đơn", "Tến Sản phẩm", "Đơn giá", "Số lượng", "Thành tiền"
             }
         ));
-        jScrollPane6.setViewportView(jTable4);
+        jScrollPane6.setViewportView(tblBhRight);
 
         javax.swing.GroupLayout PanelchithietbanhangLayout = new javax.swing.GroupLayout(Panelchithietbanhang);
         Panelchithietbanhang.setLayout(PanelchithietbanhangLayout);
@@ -4121,7 +4155,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelchithietbanhangLayout.createSequentialGroup()
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txTongBh, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28))
                     .addGroup(PanelchithietbanhangLayout.createSequentialGroup()
                         .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4150,7 +4184,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txTongBh, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -6643,6 +6677,42 @@ public class JFHethong_admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         editSanpham.setVisible(true);
     }//GEN-LAST:event_btnSuaSPActionPerformed
+
+    private void btnBhThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBhThemActionPerformed
+        // TODO add your handling code here:
+        int i = tblBhLeft.getSelectedRow();
+        if (i == -1) {
+            JOptionPane.showMessageDialog(rootPane, "vui lòng chọn dòng sản phẩm");
+
+        } else {
+            Vector header = new Vector();
+            header.add("STT");
+            header.add("Tên sản phẩm");
+            header.add("Giá");
+            header.add("Số lượng");
+            header.add("Thành tiền");
+            if (modelbh.getRowCount() == 0) {
+
+                modelbh = new DefaultTableModel(header, 0);
+            }
+            Object[] row = new Object[6];
+            
+            row[0] = modelbh.getRowCount(); 
+            row[1] = tblBhLeft.getValueAt(i, 2);
+            row[2] = tblBhLeft.getValueAt(i, 3);
+            row[3] = 1;
+            row[4] = tblBhLeft.getValueAt(i, 3);
+            modelbh.addRow(row);
+            tblBhRight.setModel(modelbh);
+            
+            for (int j = 0; j < modelbh.getRowCount(); j++) {
+                 txTong += (double)tblBhRight.getValueAt(j, 4);
+                
+            }
+            
+            txTongBh.setText(String.valueOf(txTong));
+        }
+    }//GEN-LAST:event_btnBhThemActionPerformed
     public String checkgender() {
         String gender = "";
         if (rdNam.isSelected() || rdNam1.isSelected()) {
@@ -6785,6 +6855,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
     private javax.swing.JDialog addNhanvien;
     private javax.swing.JDialog addSanpham;
     private javax.swing.JDialog addTaikhoan;
+    private javax.swing.JButton btnBhThem;
     private javax.swing.JButton btnDangxuat;
     private javax.swing.JButton btnDel;
     private javax.swing.JButton btnDel1;
@@ -6865,7 +6936,6 @@ public class JFHethong_admin extends javax.swing.JFrame {
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
@@ -6996,7 +7066,6 @@ public class JFHethong_admin extends javax.swing.JFrame {
     private javax.swing.JTable jTable13;
     private javax.swing.JTable jTable14;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
     private javax.swing.JTable jTable7;
@@ -7074,7 +7143,6 @@ public class JFHethong_admin extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField77;
     private javax.swing.JTextField jTextField78;
     private javax.swing.JTextField jTextField79;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField80;
     private javax.swing.JTextField jTextField81;
     private javax.swing.JTextField jTextField82;
@@ -7157,6 +7225,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
     public javax.swing.JRadioButton rdNu1;
     public javax.swing.JRadioButton rdNu2;
     private javax.swing.JTable tblBhLeft;
+    private javax.swing.JTable tblBhRight;
     private javax.swing.JLabel txAddressError;
     private javax.swing.JLabel txAddressError1;
     private javax.swing.JLabel txAddressError10;
@@ -7251,6 +7320,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
     private javax.swing.JLabel txSDTError7;
     private javax.swing.JLabel txSDTError8;
     private javax.swing.JLabel txSDTError9;
+    private javax.swing.JTextField txTongBh;
     private javax.swing.JLabel txtHeader;
     // End of variables declaration//GEN-END:variables
 
