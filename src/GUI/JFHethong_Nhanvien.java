@@ -99,6 +99,31 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
     public void cbblsp(){
         
     }
+    public void showSP(){
+        Vector header = new Vector();
+        header.add("ID Sản phẩm");
+        header.add("Loại sản phẩm");
+        header.add("Tên sản phẩm");
+        header.add("Giá");
+        header.add("Số lượng");
+        if (modelsp.getRowCount() == 0) {
+
+            modelsp = new DefaultTableModel(header, 0);
+        }
+
+        for (int i = 0; i < listSP.size(); i++) {
+            Object[] row = new Object[9];
+            row[0] = (listSP.get(i).getId_sanpham());
+            row[1] = (listSP.get(i).getTen_sp());
+            row[2] = ((listSP.get(i).getId_loaisanpham()));
+            row[3] = (listSP.get(i).getGia_sp());
+            row[4] = (listSP.get(i).getDonvitinh_sp());
+            row[5] = (listSP.get(i).getSoluong_sp());
+            modelsp.addRow(row);
+
+        }
+        tblSP.setModel(modelsp);
+    }
     
   
    
@@ -3771,9 +3796,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         panelBHLayout.setVerticalGroup(
             panelBHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Panelsanpham, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panelBHLayout.createSequentialGroup()
-                .addComponent(Panelchithietbanhang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(Panelchithietbanhang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         btnThemKH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_add_30px.png"))); // NOI18N
@@ -4694,7 +4717,6 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
 
         btnExitnv.setForeground(new java.awt.Color(255, 51, 51));
         btnExitnv.setText("X");
-        btnExitnv.setActionCommand("X");
         btnExitnv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitnvActionPerformed(evt);

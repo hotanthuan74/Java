@@ -471,7 +471,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tblBhLeft = new javax.swing.JTable();
         jButton3 = new javax.swing.JButton();
         Panelchithietbanhang = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
@@ -4023,7 +4023,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tblBhLeft.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -4035,7 +4035,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
                 "ID Sản phẩm", "Loại Sản phẩm", "Tên Sản phẩm", "Đơn giá", "Số lượng"
             }
         ));
-        jScrollPane5.setViewportView(jTable3);
+        jScrollPane5.setViewportView(tblBhLeft);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_add_30px.png"))); // NOI18N
@@ -6996,7 +6996,6 @@ public class JFHethong_admin extends javax.swing.JFrame {
     private javax.swing.JTable jTable13;
     private javax.swing.JTable jTable14;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
@@ -7157,6 +7156,7 @@ public class JFHethong_admin extends javax.swing.JFrame {
     public javax.swing.JRadioButton rdNu;
     public javax.swing.JRadioButton rdNu1;
     public javax.swing.JRadioButton rdNu2;
+    private javax.swing.JTable tblBhLeft;
     private javax.swing.JLabel txAddressError;
     private javax.swing.JLabel txAddressError1;
     private javax.swing.JLabel txAddressError10;

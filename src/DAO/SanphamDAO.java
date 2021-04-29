@@ -24,15 +24,16 @@ public class SanphamDAO {
     public ArrayList<SanphamDTO> readSanphamDAO() {
         ArrayList<SanphamDTO> list = new ArrayList<>();
         try {
-            String sSQL="SELECT tbl_sanpham.id_sanpham,tbl_sanpham.id_loaisanpham"
+            String sSQL="SELECT tbl_sanpham.id_sanpham,tbl_sanpham.id_loaisanpham,tbl_loaisanpham.ten_lsp"
                     + ",tbl_sanpham.ten_sp,tbl_sanpham.dongia_sp,tbl_sanpham.soluong_sp,tbl_sanpham.donvitinh_sp,tbl_sanpham.trangthai_sp "
-                    + "from tbl_sanpham ";
+                    + "from tbl_sanpham,tbl_loaisanpham where tbl_sanpham.id_loaisanpham = tbl_loaisanpham.id_loaisanpham ";
             ResultSet rs=conn.sqlQuery(sSQL);
             if(rs!=null){
                 while(rs.next()){
                     SanphamDTO spDTO = new SanphamDTO();
                     LoaisanphamDTO loaiDTO = new LoaisanphamDTO();
                     loaiDTO.setIdLoaiSanphamDTO(rs.getInt("id_loaisanpham"));
+                    loaiDTO.setTenLoaiSanphamDTO(rs.getString("ten_lsp"));
                      spDTO.setIdSanphamDTO(rs.getInt("id_sanpham"));
                     spDTO.setIdLoaiSanphamDTO(loaiDTO);
                     spDTO.setTensanphamDTO(rs.getString("ten_sp"));
@@ -55,7 +56,7 @@ public class SanphamDAO {
         
     }
     // thêm sản phẩm
-     public boolean AddSanphamDAO(SanphamDTO spDTO){
+     public boolean addSanphamDAO(SanphamDTO spDTO){
         
             String sSQL="INSERT INTO `tbl_sanpham` (`id_sanpham`, `id_loaisanpham`, `ten_sp`,`dongia_sp`,`soluong_sp`,`donvitinh_sp`,`trangthai_sp`) "
                     + "VALUES ('"+spDTO.getIdSanphamDTO()+"','"+spDTO.getIdLoaiSanphamDTO().getIdLoaiSanphamDTO()
