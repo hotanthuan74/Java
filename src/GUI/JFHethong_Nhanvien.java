@@ -5,30 +5,31 @@
  */
 package GUI;
 
-import DAO.NhanvienDAO;
-import DAO.SanphamDAO;
+import BUS.*;
+import DAO.*;
+import DTO.*;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Panel;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Vector;
+import javax.management.StringValueExp;
 import javax.swing.*;
 import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.*;
 
-
 /**
  *
  * @author E6540
  */
 public class JFHethong_Nhanvien extends javax.swing.JFrame {
-    
+
     DefaultTableModel model = new DefaultTableModel();
-    DefaultTableModel modelsp = new DefaultTableModel();
-    
+    DefaultTableModel modelbh = new DefaultTableModel();
+
     int select = 0;
 
     /**
@@ -46,35 +47,34 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
-        
-        
-        initComponents();
 
-        setLocationRelativeTo(null);
+        initComponents();
         
-         txtHeader.setText("QUẢN LÍ BÁN HÀNG");
-       PanelBanhang.setBackground(new Color(37, 171, 191));
+        showBH();
+        
+        setLocationRelativeTo(null);
+
+        txtHeader.setText("QUẢN LÍ BÁN HÀNG");
+        PanelBanhang.setBackground(new Color(37, 171, 191));
         qlbhLeft.setBackground(new Color(102, 102, 102));
         qlkhLeft1.setBackground(null);
         qlnhLeft1.setBackground(null);
-        
+
         qlhdLeft1.setBackground(null);
         qllspLeft.setBackground(null);
-       
+
         qlnccLeft.setBackground(null);
-        
+
         qlspLeft1.setBackground(null);
-        
+
 //        PanelHienthi.removeAll();
 //        PanelHienthi.add(panelBH);
 //        PanelHienthi.repaint();   
-
         PanelHienthi.removeAll();
         PanelHienthi.add(panelBH);
         PanelHienthi.repaint();
 //        Hien thi dilog
-        
-        
+
         addSanpham.pack();
         editSanpham.pack();
         addSanpham.setLocationRelativeTo(null);
@@ -83,7 +83,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         addKhachhang.setLocationRelativeTo(null);
         editKhachhang.pack();
         editKhachhang.setLocationRelativeTo(null);
-        
+
         addLoaisanpham.pack();
         addLoaisanpham.setLocationRelativeTo(null);
         editLoaisanpham.pack();
@@ -92,17 +92,40 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         addNCC.setLocationRelativeTo(null);
         editNCC.pack();
         editNCC.setLocationRelativeTo(null);
-        
-        
 
     }
-    public void cbblsp(){
-        
+
+    public void cbblsp() {
+
     }
-    
-    
-  
-   
+
+    public void showBH() {
+        ArrayList<SanphamDTO> listSP = new SanphamBUS().getList();
+
+        Vector header = new Vector();
+        header.add("ID Sản phẩm");
+        header.add("Loại sản phẩm");
+        header.add("Tên sản phẩm");
+        header.add("Giá");
+        header.add("Số lượng");
+        if (model.getRowCount() == 0) {
+
+            model = new DefaultTableModel(header, 0);
+        }
+
+        for (int i = 0; i < listSP.size(); i++) {
+            Object[] row = new Object[6];
+            row[0] = (listSP.get(i).getIdSanphamDTO());
+            row[1] = ((listSP.get(i).getIdLoaiSanphamDTO().getTenLoaiSanphamDTO()));
+            row[2] = (listSP.get(i).getTensanphamDTO());
+            row[3] = (listSP.get(i).getDongiasanphamDTO());
+            row[4] = (listSP.get(i).getSoluongsanphamDTO());
+            model.addRow(row);
+
+        }
+        tblBhLeft.setModel(model);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -449,12 +472,12 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
+        tblBhLeft = new javax.swing.JTable();
+        btnBhThem = new javax.swing.JButton();
         Panelchithietbanhang = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        txTongBh = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
@@ -463,7 +486,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        tblBhRight = new javax.swing.JTable();
         panelKH = new javax.swing.JPanel();
         btnThemKH = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
@@ -3611,7 +3634,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tblBhLeft.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -3623,14 +3646,14 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 "ID Sản phẩm", "Loại Sản phẩm", "Tên Sản phẩm", "Đơn giá", "Số lượng"
             }
         ));
-        jScrollPane5.setViewportView(jTable3);
+        jScrollPane5.setViewportView(tblBhLeft);
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_add_30px.png"))); // NOI18N
-        jButton3.setText("Thêm");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnBhThem.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnBhThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_add_30px.png"))); // NOI18N
+        btnBhThem.setText("Thêm");
+        btnBhThem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnBhThemActionPerformed(evt);
             }
         });
 
@@ -3646,7 +3669,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(PanelsanphamLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBhThem, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelsanphamLayout.setVerticalGroup(
@@ -3657,7 +3680,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(btnBhThem)
                 .addGap(22, 22, 22))
         );
 
@@ -3667,7 +3690,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
 
         jTextField7.setBorder(javax.swing.BorderFactory.createTitledBorder("Mã hóa đơn"));
 
-        jTextField8.setBorder(javax.swing.BorderFactory.createTitledBorder("Tổng tiền"));
+        txTongBh.setBorder(javax.swing.BorderFactory.createTitledBorder("Tổng tiền"));
 
         jTextField9.setBorder(javax.swing.BorderFactory.createTitledBorder("Khách hàng"));
 
@@ -3685,18 +3708,18 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_us_dollar_30px.png"))); // NOI18N
         jButton7.setText("Thanh toán");
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        tblBhRight.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "STT", "Mã hóa đơn", "Tến Sản phẩm", "Đơn giá", "Số lượng", "Thành tiền"
+                "STT", "Tên Sản phẩm", "Đơn giá", "Số lượng", "Thành tiền"
             }
         ));
-        jScrollPane6.setViewportView(jTable4);
+        jScrollPane6.setViewportView(tblBhRight);
 
         javax.swing.GroupLayout PanelchithietbanhangLayout = new javax.swing.GroupLayout(Panelchithietbanhang);
         Panelchithietbanhang.setLayout(PanelchithietbanhangLayout);
@@ -3714,7 +3737,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelchithietbanhangLayout.createSequentialGroup()
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txTongBh, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28))
                     .addGroup(PanelchithietbanhangLayout.createSequentialGroup()
                         .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3741,7 +3764,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txTongBh, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelchithietbanhangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3772,7 +3795,9 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         panelBHLayout.setVerticalGroup(
             panelBHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Panelsanpham, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Panelchithietbanhang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelBHLayout.createSequentialGroup()
+                .addComponent(Panelchithietbanhang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         btnThemKH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/framedesign/icons8_add_30px.png"))); // NOI18N
@@ -4741,9 +4766,9 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public String checkDVT(JComboBox e){
+    public String checkDVT(JComboBox e) {
         String s = "";
-        
+
         return s;
     }
     private void btnThemKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemKHActionPerformed
@@ -5207,7 +5232,7 @@ public class JFHethong_Nhanvien extends javax.swing.JFrame {
         qlnhLeft1.setBackground(null);
 
         qllspLeft.setBackground(new Color(102, 102, 102));
-qlhdLeft1.setBackground(null);
+        qlhdLeft1.setBackground(null);
         qlnccLeft.setBackground(null);
 
         qlspLeft1.setBackground(null);
@@ -5270,7 +5295,7 @@ qlhdLeft1.setBackground(null);
         PanelLoaisanpham.setBackground(null);
 
         PanelBanhang.setBackground(null);
-        
+
         PanelHoadon.setBackground(null);
         PanelNhacungcap.setBackground(null);
 
@@ -5307,7 +5332,7 @@ qlhdLeft1.setBackground(null);
         qlbhLeft.setBackground(null);
         qlkhLeft1.setBackground(null);
         qlnhLeft1.setBackground(new Color(102, 102, 102));
-qlhdLeft1.setBackground(null);
+        qlhdLeft1.setBackground(null);
         qllspLeft.setBackground(null);
 
         qlnccLeft.setBackground(null);
@@ -5380,21 +5405,49 @@ qlhdLeft1.setBackground(null);
 
     private void btnDangxuatnvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangxuatnvActionPerformed
         // TODO add your handling code here:
-        int i=JOptionPane.showConfirmDialog(this, "Bạn chắc chắn muốn đóng tài khoản");
-        if(i==JOptionPane.YES_OPTION){
-            dangnhap dn=new dangnhap();
+        int i = JOptionPane.showConfirmDialog(this, "Bạn chắc chắn muốn đóng tài khoản");
+        if (i == JOptionPane.YES_OPTION) {
+            dangnhap dn = new dangnhap();
             dn.setVisible(true);
             this.dispose();
-        }
-        else{
+        } else {
             return;
         }
     }//GEN-LAST:event_btnDangxuatnvActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnBhThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBhThemActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-    
+        int i = tblBhLeft.getSelectedRow();
+        if (i == -1) {
+            JOptionPane.showMessageDialog(rootPane, "vui lòng chọn dòng sản phẩm");
+
+        } else {
+            Vector header = new Vector();
+            header.add("STT");
+            header.add("Tên sản phẩm");
+            header.add("Giá");
+            header.add("Số lượng");
+            header.add("Thành tiền");
+            if (modelbh.getRowCount() == 0) {
+
+                modelbh = new DefaultTableModel(header, 0);
+            }
+            Object[] row = new Object[6];
+            
+            row[0] = modelbh.getRowCount(); 
+            row[1] = tblBhLeft.getValueAt(i, 2);
+            row[2] = tblBhLeft.getValueAt(i, 3);
+            row[3] = 1;
+            row[4] = tblBhLeft.getValueAt(i, 3);
+            modelbh.addRow(row);
+            tblBhRight.setModel(modelbh);
+            double s = 0;
+            for (int j = 0; j <= modelbh.getRowCount(); j++) {
+                 s += (double)tblBhRight.getValueAt(j, 4);
+            }
+            txTongBh.setText(String.valueOf(s));
+        }
+    }//GEN-LAST:event_btnBhThemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -5422,261 +5475,7 @@ qlhdLeft1.setBackground(null);
             java.util.logging.Logger.getLogger(JFHethong_Nhanvien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -5711,6 +5510,7 @@ qlhdLeft1.setBackground(null);
     private javax.swing.JDialog addNhanvien;
     private javax.swing.JDialog addSanpham;
     private javax.swing.JDialog addTaikhoan;
+    private javax.swing.JButton btnBhThem;
     private javax.swing.JButton btnDangxuatnv;
     private javax.swing.JButton btnDel;
     private javax.swing.JButton btnDel1;
@@ -5782,7 +5582,6 @@ qlhdLeft1.setBackground(null);
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton34;
@@ -5894,8 +5693,6 @@ qlhdLeft1.setBackground(null);
     private javax.swing.JTable jTable12;
     private javax.swing.JTable jTable13;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable6;
     private javax.swing.JTable jTable8;
     private javax.swing.JTable jTable9;
@@ -5968,7 +5765,6 @@ qlhdLeft1.setBackground(null);
     private javax.swing.JTextField jTextField77;
     private javax.swing.JTextField jTextField78;
     private javax.swing.JTextField jTextField79;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField80;
     private javax.swing.JTextField jTextField81;
     private javax.swing.JTextField jTextField82;
@@ -6033,6 +5829,8 @@ qlhdLeft1.setBackground(null);
     public javax.swing.JRadioButton rdNu;
     public javax.swing.JRadioButton rdNu1;
     public javax.swing.JRadioButton rdNu2;
+    private javax.swing.JTable tblBhLeft;
+    private javax.swing.JTable tblBhRight;
     private javax.swing.JLabel txAddressError;
     private javax.swing.JLabel txAddressError1;
     private javax.swing.JLabel txAddressError10;
@@ -6127,6 +5925,7 @@ qlhdLeft1.setBackground(null);
     private javax.swing.JLabel txSDTError7;
     private javax.swing.JLabel txSDTError8;
     private javax.swing.JLabel txSDTError9;
+    private javax.swing.JTextField txTongBh;
     private javax.swing.JLabel txtHeader;
     // End of variables declaration//GEN-END:variables
 
